@@ -5,7 +5,7 @@ const Stack = createStackNavigator();
 
 const Router = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Register">
       <Stack.Screen
         name="Splash"
         component={Splash}
