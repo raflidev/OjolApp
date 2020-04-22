@@ -2,7 +2,10 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import ActionButton from './ActionButton';
 import {colors} from '../../utils';
-const WelcomeAuth = () => {
+const WelcomeAuth = ({navigation}) => {
+  const handleGoTo = screen => {
+    navigation.navigate(screen);
+  };
   return (
     <View style={styles.wrapper.page}>
       <View style={styles.wrapper.illustration} />
@@ -10,10 +13,12 @@ const WelcomeAuth = () => {
       <ActionButton
         desc="Silakan masuk, jika anda sudah punya akun"
         title="Masuk"
+        onPress={() => handleGoTo('Login')}
       />
       <ActionButton
         desc="atau silakan daftar jika anda belum memiliki akun"
         title="Daftar"
+        onPress={() => handleGoTo('Register')}
       />
     </View>
   );
