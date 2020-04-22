@@ -20,6 +20,7 @@ const styles = {
   text: {
     desc: {
       fontSize: 10,
+      maxWidth: 225,
       color: colors.text.default,
       textAlign: 'center',
       paddingHorizontal: '15%',
